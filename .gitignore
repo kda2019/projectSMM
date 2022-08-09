@@ -1,0 +1,4 @@
+/venv
+/.idea
+/__pychare__
+db.sqlite3
