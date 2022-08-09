@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for post in data.data %}
+        <img src="{{ post.media_url }}" width="300px">
+        {% for comment in post.comments.data %}
+            <p>{{comment.text}}</p>
+            {% for reply in comment.replies.data %}
+                <p>---{{ reply.text }}</p>
+            {% endfor %}
+        {% endfor %}
+        
+        <hr>
+        <hr>
+    {% endfor %}
+</body>
+</html>

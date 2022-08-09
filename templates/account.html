@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h2><a href="{% url 'get_creds' user.id %}">Добавить аккаунт Meta(facebook)</a></h2>
+<hr>
+<h1>Список приложений:</h1>
+{% for i in data.data %}
+    <p><a href="{% url "insta-content" i.instagram_business_account.id %}">{{ i.name }}</a> - {{ i.category }}</p>
+{% endfor %}
+</body>
+</html>

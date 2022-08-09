@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Добро пожаловать!</h1>
+{% if bad_auth %}
+    <h3>Неверный логин или пароль</h3>
+{% endif %}
+<form action="" method="POST">
+    <label for="">Логин
+        <input type="text" name="username" required>
+    </label>
+    <label for="">Пароль
+        <input type="password" name="password" required>
+    </label>
+    <input type="submit" value="Вход">
+    {% csrf_token %}
+</form>
+</body>
+</html>
